@@ -1,13 +1,15 @@
-import type { Component } from 'solid-js';
-import { Header } from "./views/hero";
+import { Component } from 'solid-js';
+import NavBar from './components/NavBar';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
 
 const App: Component = () => {
-  let header = Header.default();
+    { match, getParams } = useRouter();
   return (
-  );
+    <NavBar />
+    <Switch>
+        <Match when={match("", /^?$/}> <Home /> </Match>
+    </Switch>
+    );
 };
 
 export default App;
