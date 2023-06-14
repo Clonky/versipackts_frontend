@@ -1,4 +1,5 @@
 import { Component } from "solid-js";
+import { A } from "@solidjs/router"
 
 export const NavBar: Component = () => {
 
@@ -6,9 +7,9 @@ export const NavBar: Component = () => {
     <nav class="navbar">
         <h1> VersiPack </h1>
         <div class="navbutton-container">
-            <a href="/">Home</a>
-            <a href="/Login">Login</a>
-            <a class="register-link" href="/Register">Register</a>
+            <A href="/" activeClass="underlined">Home</A>
+            <A href="/Login" activeClass="underlined">Login</A>
+            <A class="register-link" href="/Register" activeClass="underlined">Register</A>
         </div>
     </nav>
     );
