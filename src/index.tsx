@@ -3,12 +3,12 @@ import { render } from 'solid-js/web';
 
 import './index.css';
 import App from './App';
-import { createContext } from 'solid-js';
+import { Router, Routes, Route } from "@solidjs/router";
+import { pageList } from './pages/pagelist';
+import { Login } from './pages/login';
+import { RegisterPage } from './pages/register';
 
 const root = document.getElementById('root');
-
-const RouterContext = createContext();
-
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   throw new Error(
@@ -16,4 +16,13 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <App />, root!);
+render(() => (
+<Router>
+  <Routes>
+   <Route path="/" component={App} />
+   <Route path="/login" component={Login} />
+   <Route path="/register" component={RegisterPage} />
+  </Routes>
+</Router>
+),
+ root!);

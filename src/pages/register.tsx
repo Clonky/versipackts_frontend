@@ -1,4 +1,5 @@
 import { Component } from "solid-js"
+import { NavBar } from "../components/NavBar";
 
 type RegisterFormElementInfo = { labelText: string, inputType: string, inputID: string, required: boolean };
 
@@ -14,6 +15,8 @@ const RegisterFormElement: Component<RegisterFormElementInfo> = (props) => {
 export const RegisterPage: Component = () => {
 
     return (
+        <>
+        <NavBar />
         <form class="register-form" method="post" action="http://127.0.0.1:8000/customers">
             <RegisterFormElement labelText="Company Name: " inputType="text" inputID="id_company_name" required={true} />
             <RegisterFormElement labelText="Company Address: " inputType="text" inputID="id_company_address" required={true} />
@@ -23,5 +26,6 @@ export const RegisterPage: Component = () => {
             <p> Careful, this website is still work in progress. Do not enter actual credentials during this stage.</p>
             <input type="submit" />
         </form>
+        </>
     );
 }
