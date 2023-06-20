@@ -4,7 +4,7 @@ import { A } from "@solidjs/router"
 export const NavBar: Component = () => {
 
     return (
-    <nav class="navbar">
+    <nav class="navbar sticky">
         <div class="navbutton-container">
             <A href="/" activeClass="underlined">Home</A>
             <A href="/Login" activeClass="underlined">Login</A>

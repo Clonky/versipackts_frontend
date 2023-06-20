@@ -30,7 +30,9 @@ export const UserView = () => {
     return (
         <div>
             <NavBar/>
-            <UserBasicCard />
+            <div class={styles.content}>
+                <UserBasicCard />
+            </div>
         </div>
     )
 }

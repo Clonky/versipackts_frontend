@@ -1,11 +1,22 @@
+@use "../../index.scss";
+
 .userbasiccard {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     max-width: max-content;
     padding: 1.0rem;
-    background-color: aqua;
-    box-shadow: 3px 3px 3px 0px darken(aqua, 20%);
+    background-color: index.$fluorescent-cyan;
+    box-shadow: 3px 3px 3px 0px darken(index.$fluorescent-cyan, 20%);
+    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.userbasiccard:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 1.0rem;
 }
 
 .descriptor {
