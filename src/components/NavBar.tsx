@@ -5,7 +5,6 @@ export const NavBar: Component = () => {
 
     return (
     <nav class="navbar">
-        <h1> VersiPack </h1>
         <div class="navbutton-container">
             <A href="/" activeClass="underlined">Home</A>
             <A href="/Login" activeClass="underlined">Login</A>

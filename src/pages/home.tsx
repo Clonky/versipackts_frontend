@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import styles from "./home.module.css"
+import styles from "./home.module.scss"
 
 export const Home: Component = () => {
     return (

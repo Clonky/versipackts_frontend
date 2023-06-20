@@ -1,0 +1,25 @@
+.userbasiccard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    max-width: max-content;
+    padding: 1.0rem;
+    background-color: aqua;
+    box-shadow: 3px 3px 3px 0px darken(aqua, 20%);
+}
+
+.descriptor {
+    grid-area: descriptor;
+    margin-right: 20px;
+}
+
+.descfield {
+    margin-left: auto;
+    grid-area: descfield;
+}
+
+.entry {
+    display: grid;
+    grid-template-areas: "descriptor descfield";
+    max-width: 400px;
+}
