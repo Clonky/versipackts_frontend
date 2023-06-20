@@ -38,7 +38,7 @@ code {
     margin-bottom: 2rem;
     border-bottom: 5px double black;
     background-color: var(--vivid-sky-blue);
-    background-image: url("./assets/Logo.svg");
+    background-image: url("./assets/Logo.svg"), linear-gradient(to right, var(--vivid-sky-blue), white);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -92,11 +92,11 @@ code {
 
 .navbutton-container > a {
     background-color: var(--fluorescent-cyan);
-    border-radius: 8px;
-    border: 1px solid black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;
     box-sizing: border-box;
     text-decoration: none;
+    box-shadow: 2px 2px 0px 1px darken(#59d2feff, 40%);
 }
 .nav-button-container > button {
     /* box-shadow: 3px -3px 3px 0px #30A6D1; */
