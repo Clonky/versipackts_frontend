@@ -1,20 +1,27 @@
 import { Show, createResource, createSignal } from "solid-js";
 import { NavBar } from "../../components/NavBar";
-import { RouteDataFuncArgs, useParams, useRouteData, useSearchParams } from "@solidjs/router";
+import { useRouteData } from "@solidjs/router";
+import { UserData } from "./[id].data";
 import  styles from "./userview.module.css";
-import { fetchUser } from "./[id].data";
 
+const UserBasicCard = () => {
+    const data = useRouteData<typeof UserData>();
+    return (
+    <Show when={!data.loading} fallback={<>Fetching user data...</>}>
+        <div class={`${styles.userbasiccard}`}>
+            <div>Firmenname: {(data().company_name)}</div>
+            <div>Firmenadresse: {(data().company_address)}</div>
+            <div>Firmen Email: {(data().company_email)}</div>
+        </div>
+    </Show>
+    );
+}
 
 export const UserView = () => {
-    const params = useParams();
-    const [data] = createResource(params.id, fetchUser)
     return (
         <div>
-            <Show when={!data.loading} fallback={<>Fetching user data...</>}>
-                Firmenname: {(data().company_name)}<br/>
-                Firmenadresse: {(data().company_address)}<br/>
-                Firmen Email: {(data().company_email)}
-            </Show>
+            <NavBar/>
+            <UserBasicCard />
         </div>
     )
 }
