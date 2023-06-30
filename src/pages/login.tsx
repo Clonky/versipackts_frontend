@@ -7,7 +7,7 @@ const FormField: Component<FormFieldInfo> = (props) => {
     return (
         <div class="form-element">
             <label for={props.inputId}>{props.labelText}</label>
-            <input type={props.inputType} id={props.inputId}/>
+            <input type={props.inputType} name={props.inputId} id={props.inputId}/>
         </div>
     );
 }
@@ -17,8 +17,8 @@ export const Login: Component<any> = () => {
         <>
         <NavBar />
         <div class="login-container">
-            <form class="login-form" action="" method="post">
-                <FormField inputId="username" inputType="text" labelText="Username: " />
+            <form class="login-form" action="http://192.168.178.41:8001/login" method="post">
+                <FormField inputId="email" inputType="text" labelText="Email: " />
                 <FormField inputId="password" inputType="text" labelText="Password: " />
                 <input type="submit"/>
             </form>

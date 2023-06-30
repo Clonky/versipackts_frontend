@@ -8,7 +8,7 @@ export type PublicUserData = {
 }
 
 export async function fetchUser(id: string) {
-    const response = await fetch(`http://localhost:8001/customers?id=${id}`);
+    const response = await fetch(`http://192.168.178.41:8001/customers?id=${id}`);
     return (await response.json())
 }
 
