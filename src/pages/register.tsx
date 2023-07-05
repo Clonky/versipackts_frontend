@@ -17,7 +17,7 @@ export const RegisterPage: Component = () => {
     return (
         <>
         <NavBar />
-        <form class="register-form" method="post" action="http://192.168.178.41:8001/customers">
+        <form class="register-form" method="post" action="http://localhost:8001/customers">
             <RegisterFormElement labelText="Company Name: " inputType="text" inputID="companyname" required={true} />
             <RegisterFormElement labelText="Company Address: " inputType="text" inputID="companyaddress" required={true} />
             <RegisterFormElement labelText="Company Email: " inputType="email" inputID="companyemail" required={true} />
